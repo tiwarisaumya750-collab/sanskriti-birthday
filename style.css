@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  overflow-x: hidden;
+  background: linear-gradient(135deg,#ffe6f0,#fff2df,#f8e8ff);
+  font-family: 'Poppins', sans-serif;
+}
+
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 30px;
+  text-align: center;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.page.active {
+  display: flex;
+}
+
+h1,h2 {
+  font-family: 'Dancing Script', cursive;
+  color: #6d4b58;
+  z-index: 2;
+}
+
+button {
+  margin-top: 30px;
+  padding: 14px 28px;
+  border: none;
+  border-radius: 50px;
+  background: #ffb6c1;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+.teddy {
+  width: 220px;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-12px)}
+}
+
+.code-boxes {
+  display: flex;
+  gap: 15px;
+  margin: 20px;
+}
+
+.code-boxes span {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(3,80px);
+  gap: 12px;
+}
+
+.keypad button {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+}
+
+.message-box {
+  max-width: 800px;
+  background: rgba(255,255,255,0.4);
+  padding: 20px;
+  border-radius: 30px;
+  backdrop-filter: blur(6px);
+}
+
+.envelope {
+  font-size: 120px;
+  cursor: pointer;
+}
+
+.love-notes {
+  display: none;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.love-notes span {
+  background: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transform: rotate(calc(var(--r) * 1deg));
+}
+
+#cake {
+  width: 260px;
+  cursor: pointer;
+}
+
+#gifts {
+  display: none;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gift {
+  width: 120px;
+  background: white;
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.note {
+  width: 220px;
+}
+
+.scoreboard {
+  background: rgba(255,255,255,0.5);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+#basket {
+  position: absolute;
+  bottom: 40px;
+  font-size: 60px;
+}
+
+.puzzle-area {
+  display: grid;
+  grid-template-columns: repeat(2,120px);
+  gap: 15px;
+}
+
+.piece {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 50px;
+}
+
+#cassette {
+  width: 260px;
+  cursor: pointer;
+  animation: float 3s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-10px)}
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.gallery img {
+  width: 220px;
+  padding: 12px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  transform: rotate(-3deg);
+}
+
+.kisses {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
