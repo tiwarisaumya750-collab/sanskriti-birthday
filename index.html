@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Happy Birthday Cutie 💖</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Dancing+Script:wght@400;700&family=Indie+Flower&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<audio autoplay loop id="bgMusic">
+  <source src="music.mp3" type="audio/mp3">
+</audio>
+
+<div class="page active" id="page1">
+  <div class="balloons"></div>
+
+  <h1>Welcomeeee mahhh cutieeee Sanskriti 💖</h1>
+
+  <img src="images/teddy.gif" class="teddy" />
+
+  <button onclick="nextPage(2)">Next Page →</button>
+</div>
+
+<div class="page" id="page2">
+  <h1>Crack the code and move forward maa babyyyy 😝</h1>
+
+  <div class="code-boxes">
+    <span id="d1"></span>
+    <span id="d2"></span>
+    <span id="d3"></span>
+    <span id="d4"></span>
+  </div>
+
+  <p id="hint"></p>
+
+  <div class="keypad"></div>
+
+  <button id="page2btn" disabled onclick="nextPage(3)">Next Page →</button>
+</div>
+
+<div class="page" id="page3">
+  <div class="petals"></div>
+
+  <div class="message-box">
+    <h2>
+      Happiesttttttt birthdayyyyy myyyyy kuchupuchu meriiii jaannnnnnnn meriiii cutuuu 😝😝💗
+      <br><br>
+      Happyyyyyyy valaaa birthdayyy ekdum pyaraaa sa day jayeee ye aapkaaa 🙈💕
+      <br><br>
+      Yee meraaa ek chotaa sa gift hai babuu aapke liyee hope krta hun aapko pasand aayega 👉🏻👈🏻
+      <br><br>
+      Baaki aage ka dekhiyee cutuuu 😾🫶🏻
+    </h2>
+  </div>
+
+  <button onclick="nextPage(4)">Next Page →</button>
+</div>
+
+<div class="page" id="page4">
+  <h1>Swipe up babyyyy 💌</h1>
+
+  <div class="envelope" onclick="openEnvelope()">
+    ✉️
+  </div>
+
+  <div class="love-notes" id="loveNotes">
+    <span>I love you 🇬🇧</span>
+    <span>Je t'aime 🇫🇷</span>
+    <span>Te amo 🇪🇸</span>
+    <span>Saranghae 🇰🇷</span>
+    <span>Aishiteru 🇯🇵</span>
+    <span>Ti amo 🇮🇹</span>
+    <span>Ich liebe dich 🇩🇪</span>
+    <span>Wo ai ni 🇨🇳</span>
+    <span>Main tumse pyaar karta hoon 🇮🇳</span>
+  </div>
+
+  <button onclick="nextPage(5)">Next Page →</button>
+</div>
+
+<div class="page" id="page5">
+  <h1>Tap tap babyyyy 😝🍰</h1>
+
+  <img src="images/cake.png" id="cake" onclick="eatCake()">
+
+  <div id="gifts">
+    <img src="images/bouquet.png" class="gift" onclick="collectGift(this)">
+    <div class="gift note" onclick="collectGift(this)">
+      I loveeee youuuu sooo muchhhh myyy babyyy here is your gifttt 🙈💗
+    </div>
+    <img src="images/oreo.png" class="gift" onclick="collectGift(this)">
+  </div>
+
+  <p>Accept the gift (tap it) 💖</p>
+
+  <button id="page5btn" disabled onclick="nextPage(6)">Next Page →</button>
+</div>
+
+<div class="page" id="page6">
+  <h1>Ready for the mini game babe? 😝🎮</h1>
+
+  <button onclick="nextPage(7)">Next Page →</button>
+</div>
+
+<div class="page" id="page7">
+  <h1>Catch everything babyyyy 💖</h1>
+
+  <div class="scoreboard">
+    💖 Hearts: <span id="heartCount">0</span>/10
+    <br>
+    🍫 Chocolates: <span id="chocoCount">0</span>/10
+    <br>
+    🌹 Roses: <span id="roseCount">0</span>/10
+  </div>
+
+  <div id="basket">🧺</div>
+
+  <button id="page7btn" disabled onclick="nextPage(8)">Next Page →</button>
+</div>
+
+<div class="page" id="page8">
+  <h1>Complete my heart babyyyy 😝💌</h1>
+
+  <div class="puzzle-area">
+    <div class="piece">❤️</div>
+    <div class="piece">❤️</div>
+    <div class="piece">❤️</div>
+    <div class="piece">❤️</div>
+  </div>
+
+  <h2>You complete my heartttt 😭💗</h2>
+
+  <button onclick="nextPage(9)">Next Page →</button>
+</div>
+
+<div class="page" id="page9">
+  <h1>Tap this babyyyy… I wanna tell you something 💌</h1>
+
+  <img src="images/cassette.png" id="cassette" onclick="playVoice()">
+
+  <audio id="voiceAudio">
+    <source src="voice.mp3" type="audio/mp3">
+  </audio>
+
+  <button onclick="nextPage(10)">Next Page →</button>
+</div>
+
+<div class="page" id="page10">
+  <h1>My cutest girllll 😭💖</h1>
+
+  <div class="gallery">
+    <img src="images/pic1.jpg">
+    <img src="images/pic2.jpg">
+    <img src="images/pic3.jpg">
+    <img src="images/pic4.jpg">
+    <img src="images/pic5.jpg">
+  </div>
+
+  <button onclick="nextPage(11)">Next Page →</button>
+</div>
+
+<div class="page" id="page11">
+  <div class="kisses"></div>
+
+  <h1>
+    Happyyyy birthdayyy myyy cutieee 😝💗
+    <br><br>
+    Hope krta hun ekdum aachi lgegi hogi aapko ye gift mera 👉🏻👈🏻
+    <br><br>
+    Ekdumm pyara sa din jaye aapka
+    <br><br>
+    Umwahhhhhhhhhhhhhhh 🙈💗
+  </h1>
+
+  <button onclick="playKissVN()">Tap for Umwahhhh 💋</button>
+
+  <audio id="kissAudio">
+    <source src="kiss-vn.mp3" type="audio/mp3">
+  </audio>
+</div>
+
+<script src="script.js"></script>
+</body>
+    </html>
